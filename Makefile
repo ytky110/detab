@@ -3,9 +3,9 @@ WNO = -Wno-implicit-int
 DBG = # -g -O0  # debug option
 FLG = $(WAL) $(WNO) $(DBG)
 
-bin/detab: src/detab.c Makefile
+bin/detab: src/detab.c
 	mkdir -p bin
-	gcc $(FLG) $< -o $@
+	gcc $(FLG) $^ -o $@
 
 .PHONY: clean
 
